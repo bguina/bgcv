@@ -1,0 +1,38 @@
+
+.hidden-print {
+  display: none !important;
+}
+
+.visible-print {
+  display: block !important;
+}
+
+
+#header-container img 
+{
+  height: 130px;
+}
+
+#profile {
+  float: left;
+  width: 33.3333%;
+  .col-top:first-child {
+    display: none !important;
+  }
+  .col-top {
+    width: 100%;
+  }
+}
+
+#xppro {
+  float: right;
+}
+
+#education {
+  width: 66.6666%;
+}
+
+#skills {
+  float: left;
+}
+

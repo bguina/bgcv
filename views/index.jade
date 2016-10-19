@@ -1,0 +1,305 @@
+extends layout
+block content
+  input.hidden#navbar-checkbox(type="checkbox" name="navbar-checkbox" checked="checked")
+  #navbar.navbar-fixed-top.hidden-print
+    nav.navbar.navbar-inverse
+      .navbar-header
+        .pull-right.hidden.visible-no-js.navbar-toggle
+          img(src="/img/no-js.png" title="JS désactivé" alt="Javascript est désactivé" width=28 height=28)
+        button.navbar-toggle(type="button" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false" aria-controls="navbar")
+          span.sr-only
+            Navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href="#") cv.benoitguina.fr
+      #nav-collapse.navbar-collapse.collapse
+        ul.nav.navbar-nav#anchors
+          li 
+            a(href="#profile" title="Profil")
+              span.glyphicon.glyphicon-user
+              span  Profil
+          li
+            a(href="#xppro" title="Expérience")
+              span.glyphicon.glyphicon-briefcase
+              span  Expérience
+          li
+            a(href="#skills" title="Compétences")
+              span.glyphicon.glyphicon-cog
+              span  Compétences
+          li
+            a(href="#education" title="Formations")
+              span.glyphicon.glyphicon-education
+              span  Formations
+        ul.nav.navbar-nav.pull-right
+          li
+            a(href="/cv.pdf" title="Format PDF imprimable")
+              span.glyphicon.glyphicon-print
+          li.hidden-xs
+            label(for="navbar-checkbox" aria-hidden="true")
+              span.glyphicon.glyphicon-pushpin.pin(title="Epingler la navigation")
+              span.glyphicon.glyphicon-remove-circle.unpin(title="Masquer la navigation")
+  #navbar-padding.hidden-print
+  #wrapper.container-fluid
+    #content
+      .row#header-container
+        #header
+          img.pull-left.hidden.visible-print(src="/img/profile.jpg")
+          h1 benoit guina
+          h2 développeur logiciel &amp; web
+      .row
+        section.col-xs-12#profile
+          .headline
+            a(href="#profile")
+              span.glyphicon.glyphicon-user
+            h3 Profil
+            .container-fluid.pull-right.hidden-print
+              h4
+                span  Disponible 
+                  span(style="display: inline-block") CDD / CDI
+            .clearfix
+          .container-fluid.content
+            .row
+              .row-same-height.row-full-height
+                .col-sm-8.col-xs-12.col-sm-height.col-same-height.col-full-height.col-top
+                  article.content.row-same-height.row-full-height
+                    p Développeur Android.
+                    p N'hésitez-donc pas à me contacter !
+                .col-sm-4.col-xs-12.col-sm-height.col-same-height.col-full-height.col-top
+                  article.content.row-same-height.row-full-height
+                    ul.list-unstyled
+                      li
+                        h5(title="Ville")
+                          span.glyphicon.glyphicon-home
+                          span  Lille - 59000
+                      li
+                        h5(title="Adresse e-mail")
+                          span.glyphicon.glyphicon-envelope
+                          span  benoit.guina@gmail.com 
+                      li
+                        h5(title="Numéro de téléphone")
+                          span.glyphicon.glyphicon-phone
+                          span  06 47 80 81 09
+                      li
+                        h5(title="Age")
+                          span.glyphicon.glyphicon-user
+                          span  26 ans
+                      li.hidden.visible-print
+                        h5
+                          span.glyphicon.glyphicon-globe
+                          span  cv.benoitguina.fr
+            input.hidden#gmap-checkbox(type="checkbox" name="gmap-checkbox" autocomplete="off")
+            #showblock-content(data-gmap-options=gmap)
+        section.col-sm-8.col-xs-12#xppro
+          .headline
+            a(href="#xppro")
+              span.glyphicon.glyphicon-briefcase
+            h3 Expérience professionnelle
+          .container-fluid.content
+            ul.list-unstyled
+              li
+                article.content
+                  .headline
+                    h5.datetime.pull-right
+                      abbr(title="de Octobre 2012 à Février 2013 (5 mois)")
+                        span de Oct 2012
+                        span à Fév 2013
+                    h4 Développeur Android
+                    h5 pour 
+                      a(href="http://www.equisense.com" title="Site officiel Equisense")
+                        | Equisense
+                    .clearfix
+                  .row
+                    .container-fluid
+                      p J'y ai développé l'application Android permettant la synchronisation et le traitement des données locomotrices du cheval avec le capteur Equisense Motion par Bluetooth.
+                      ul
+                        li Contenu applicatifs très technique (commandes et transferts par Bluetooth Low Energy, géolocalisation GPS, traitement et représentation des données)
+                        li Adapté à différents serveurs (pySQL REST, Parse puis migré sur Firebase)
+               li
+                article.content
+                  .headline
+                    h5.datetime.pull-right
+                      abbr(title="de Octobre 2012 à Février 2013 (5 mois)")
+                        span de Oct 2012
+                        span à Fév 2013
+                    h4 Freelance PHP 5 / JS
+                    h5 avec 
+                      a(href="http://samlem.com" title="Site de Samuel Lemaresquier")
+                        | Samuel Lemaresquier
+                      | , web designer
+                    .clearfix
+                  .row
+                    .container-fluid
+                      p Le produit du projet étant un site PHP 5 livrable aux franchisés de l'enseigne AlerteApero, mon travail aura été de retravailler la base Prestashop par :
+                      ul
+                        li des remplacements et des corrections et la création d'un module métier,
+                        li le développement de la logique javascript désirée au sein des vues,
+                        li l'integration des alertes SMS pour les transporteurs par le service Twilio,
+                        li l'intégration des achats sécurisés avec le service CMCIC Paiement.
+              li
+                article.content
+                  .headline
+                    h5.datetime.pull-right
+                      abbr(title="de Juin 2012 à Juillet 2013 (13 mois)")
+                        span de Juin 2012
+                        span à Juil 2013
+                    h4 Freelance Python
+                    h5 pour 
+                      a(href="http://www.9h37.fr" title="Site de 9h37 SAS")
+                        img(src="/img/9h37.png" width=16 height=16 title="9h37 logo" alt="" style="display: inline-block;")
+                        |  9h37 SAS
+                      | , solutions de e-santé
+                    .clearfix
+                  .row
+                    .container-fluid
+                      p En auto-entrepreneur, j'ai poursuivi les projets entrepris pour 9h37 avec notamment :
+                      ul
+                        li la création de l'interface pyQt / wxPython du daemon Python existant,
+                        li le développement d'un prototype logiciel redirigeant les données d'un périphérique médical USB vers un intervenant distant par XMPP chiffré à des fins de télémédecine,
+                        li et l'étude des solutions concernant le packaging et le déploiement de code Python propriétaire.
+              li
+                article.content
+                  .headline
+                    h5.datetime.pull-right
+                      abbr(title="de Juillet 2011 à Décembre 2011 (6 mois)")
+                        span de Juil 2011
+                        span à Déc 2011
+                    h4 Junior Python / JS
+                    h5 pour 
+                      a(href="http://www.9h37.fr" title="Site de 9h37 SAS")
+                        img(src="/img/9h37.png" width=16 height=16 title="9h37 logo" alt="" style="display: inline-block;")
+                        |  9h37 SAS
+                      | , solutions de e-santé
+                    .clearfix
+                  .row
+                    .container-fluid
+                      p En stage de première année chez 9h37, j'ai développé et appris par divers projets relatifs aux besoins applicatifs du monde médical, et réalisé entre autres :
+                      ul
+                        li un daemon python permettant l'utilisation d'une page web comme interface pour l'execution de code arbitraire,
+                        li une interface javascript permettant l'utilisation des logiciels d'Accès aux Téléservices de l'Assurance Maladie (ATSAM) natifs depuis une page web par le biais du daemon, permettant ainsi des intéractions entre un serveur web et les lecteurs de cartes à puce des praticiens de santé.
+        section.col-sm-4.col-xs-12#skills
+          .headline
+            a(href="#skills")
+              span.glyphicon.glyphicon-cog
+            h3 Compétences
+          .row.content
+            .col-xs-12.content
+              article
+                h4 Dév. logiciel, web, mobile
+                ul.list-unstyled
+                  li.row
+                    .col-xs-3
+                      img(src="/img/android-original.png" title="Android logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 Android
+                  li.row
+                    .col-xs-3
+                      img(src="/img/ccpp.png" title="C/C++ logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 C, C++, lib Boost
+                  li.row
+                    .col-xs-3
+                      img(src="/img/python-original.png" title="Python logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 Python, Django
+                  li.row
+                    .col-xs-3
+                      img(src="/img/nodejs-original.png" title="NodeJS logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 NodeJS, Express
+                  li.row
+                    .col-xs-3
+                      img(src="/img/javascript-original.png" title="Javascript logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 jQuery, AngularJS
+                  li.row
+                    .col-xs-3
+                      img(src="/img/webgl.png" title="WebGL logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 OpenGL / WebGL
+                  li.row
+                    .col-xs-3
+                      img(src="/img/html5-original.png" title="HTML5 logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 HTML5 et CSS3
+            .col-xs-12.content
+              article
+                h4 Outils
+                ul.list-unstyled
+                  li.row
+                    .col-xs-3
+                      img(src="/img/android_studio.png" title="Android Studio logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 Android Studio
+                  li.row
+                    .col-xs-3
+                      img(src="/img/linux-original.png" title="Linux logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 Linux, Vim
+                  li.row
+                    .col-xs-3
+                      img(src="/img/git-original.png" title="Git logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 Git, bash
+                  li.row
+                    .col-xs-3
+                      img(src="/img/nginx-original.png" title="Nginx logo" alt="" width=36 height=36)
+                    .col-xs-9
+                      h5 Nginx
+            .col-xs-12.content
+              article
+                h4 Projets publics
+                ul.list-unstyled
+                  a(href="http://www.github.com/bguina" title="Github de Benoit Guina")
+                    li.row
+                      .col-xs-3
+                        img(src="/img/github.png")
+                      .col-xs-9
+                        h5 github.com/bguina
+        section.col-xs-12#education
+          .headline
+            a(href="#education")
+              span.glyphicon.glyphicon-education
+            h3 Formations
+          .container-fluid.content
+            ul.list-unstyled
+              li
+                article.content
+                  .headline
+                    h5.datetime.pull-right
+                      abbr(title="de Octobre 2010 à aujourd'hui")
+                        span de 2010 à
+                        span aujourd'hui
+                    h4 Diplôme d'Expertise en Technologies de l’Information
+                    h5 à 
+                      a(href="http://www.epitech.eu" title="Site d'EPITECH") EPITECH
+                    .clearfix
+                  .row
+                    .container-fluid
+                      p Score de 870 au E-TOEIC de Septembre 2012.
+              li
+                article.content
+                  .headline
+                    h5.datetime.pull-right
+                      abbr(title="de 2007 à 2010")
+                        span de 2007
+                        span à 2010
+                    h4 Baccalauréat scientifique
+                    h5 au lycée Pierre de la Ramée (02)
+                    .clearfix
+                  .row
+                    .container-fluid
+                      p Classes de spécialité mathématiques.
+    footer.container-fluid.borderleft.hidden-print
+      .container-fluid
+        .col-xs-12
+          //
+            p.pull-left
+              img(src="/img/screen-wide.png" title="Format desktop" alt="Format desktop").hidden-xs.hidden-sm
+              img(src="/img/screen-medium.png" title="Format medium" alt="Format medium").hidden-xs.hidden-md.hidden-lg
+              img(src="/img/screen-mobile.png" title="Format mobile" alt="Format mobile").hidden-sm.hidden-md.hidden-lg
+          p.pull-right
+            a(href="#" title="Haut de page") Haut de page 
+              span.glyphicon.glyphicon-chevron-up
+          .clearfix
+  .clearfix

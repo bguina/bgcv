@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-style: normal;
+  src: url('http://fonts.gstatic.com/s/oswald/v10/-WzdRTzRa5k6HlJK6-dK9Q.eot');
+  src: url('http://fonts.gstatic.com/s/oswald/v10/-WzdRTzRa5k6HlJK6-dK9Q.eot?#iefix') format('embedded-opentype'),
+  local('Oswald Regular'),
+  local('Oswald-regular'),
+  url('http://fonts.gstatic.com/s/oswald/v10/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2') format('woff2'),
+  url('http://fonts.gstatic.com/s/oswald/v10/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff') format('woff'),
+  url('http://fonts.gstatic.com/s/oswald/v10/Y_TKV6o8WovbUd3m_X9aAA.ttf') format('truetype'),
+  url('http://fonts.gstatic.com/l/font?kit=lvX543xfU1-yV4ZhBKmRFw#Oswald') format('svg');
+}
+
+/* vertical alignment styles */
+
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+/* columns of same height styles */
+
+.row-full-height {
+  height: 100%;
+}
+.col-full-height {
+  height: 100%;
+  vertical-align: middle;
+}
+.row-same-height {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.col-xs-height {
+  display: table-cell;
+  float: none !important;
+}
+
+@media (min-width: 768px) {
+  .col-sm-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+#wrapper {
+  min-height: 100%;
+  position: relative;
+
+  #content {
+
+    @mixin shadowed {
+      -webkit-box-shadow: 0px 0px 1em 0px rgba(0,0,0,0.12);
+      -moz-box-shadow: 0px 0px 1em 0px rgba(0,0,0,0.12);
+      box-shadow: 0px 0px 1em 0px rgba(0,0,0,0.12);
+    }
+
+    .datetime {
+      text-align: center;
+      & > span {
+        display: block;
+      }
+      & > abbr > span {
+        display: block;
+      }
+    }
+
+    section {
+      padding-bottom: .4em;
+    }
+
+    .content {
+      border-left: 3px #000 dotted;
+      @include shadowed;
+      padding:0;
+      margin:0;
+      padding: 8px 15px 15px 15px;
+      margin: 0 0 15px 0;
+
+      & .content {
+        background-image: url('/img/bg-paper.png');
+        border: none;
+      }
+    }
+
+    .col-full-height .content {
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+
+    .headline {
+      padding: .2em 0 .2em 0;
+      & > * {
+        display: inline-block;
+      }
+      & > a {
+        border-radius: 0% 25% 0% 25%;
+        border: 2px black solid;
+        font-size: 1.85em;
+        line-height: .85em;
+        margin: 0;
+        margin-top: -.2em;
+        padding: .22em;
+        color: #337AB7;
+      }
+    }
+    h3 {
+      margin-top: 0;
+      margin-left: .4em;
+      font-family: "Oswald";
+      font-size: 2.0em;
+    }
+
+    h4 {
+      font-family: "Oswald";
+      font-weight: bold;
+      font-size: 1.33em;
+      margin-right: .4em;
+    }
+    h5 {
+      font-family: "Oswald";
+      font-size: 1.04em;
+    }
+
+    h6 {
+      font-family: "Oswald";
+      font-size: .96em;
+    }
+
+    #photo {
+      margin: 0 2em 1em 0;
+      border: 1px black solid;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }        
+    #header-container {
+      padding: 1.8em;
+      padding-bottom:1em;
+      text-align: center;
+
+      #header {
+        width: 100%;
+        position: relative;
+        border-size: 2px;
+        border-color: black;
+        border-top: solid;
+        border-bottom: solid;
+        display: inline-block;
+        font-family: "Oswald", "Helvetica Neue", Helvetica;
+        color: #444444;
+
+        h1 {
+          font-size: 64px;
+          margin-top: .1em;
+          margin-bottom: 0;
+          line-height: 65px;
+          font-weight: bold;
+          text-shadow: 1px 1px #337AB7;
+        }
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: .2em;
+          font-size: 30px;
+          line-height: 50px;
+          font-weight: bold;
+        }
+      }
+    }
+  } //content end
+
+  footer {
+    @media (max-width: 767px) {
+      margin: 0;
+    }
+    .row {
+      margin-left: 0px;
+    }
+    height: 5em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: inherit;
+  }
+}

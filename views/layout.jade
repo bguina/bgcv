@@ -1,0 +1,24 @@
+doctype html
+html.no-js
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="/bower_components/enquire/dist/enquire.js")
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDeTg4o_kak6a2FOJDhsheXECPTBlBbU-g')
+    script(src='/js/gmap.js')
+    script(src='/js/cv.js')
+    link(rel="shortcut icon" href="/img/favicon.ico")
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/bower_components/animate.css/animate.min.css')
+    link(rel='stylesheet' href='/css/style.css')
+    if aspdf
+      link(rel="stylesheet" href="/css/pdf.css" media="screen")
+    else
+      link(rel='stylesheet' href='/css/screen.css' media="screen")
+  body(lang="fr")
+    block content
+
