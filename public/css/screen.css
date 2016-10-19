@@ -145,6 +145,10 @@ body {
   width: 22%;
 }
 
+#wrapper #content .content.desc {
+  display: none;
+}
+
 #wrapper #content #showblock-content {
   width: 100%;
   border-radius: 5px;
