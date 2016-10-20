@@ -121,7 +121,9 @@ body {
       float: left;
       width: 22%;
     }
-
+    .content.desc {
+        display: none;
+    }
     /*.content .content:hover {
       -ms-transform: scale(1.02,1.02);
       -webkit-transform: scale(1.02,1.02);
