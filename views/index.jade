@@ -45,7 +45,7 @@ block content
       .row#header-container
         #header
           h1 benoit guina
-          h2 Développeur Software et Android
+          h2 Développeur Android
       .row
         section.col-xs-12#profile
           .headline
@@ -100,26 +100,29 @@ block content
                 article.content
                   .headline
                     h5.datetime.pull-right
-                        span de Oct 2012
-                        span à Fév 2013
+                        span de Juil 2015
+                        span à Oct 2016
                     h4 Développeur Android
                     h5 pour 
-                      a(href="http://www.equisense.com" title="Site officiel Equisense")
-                        | Equisense
+                      a(href="http://www.equisense.com" title="Site de Equisense")
+                        img(src="/img/equisense.png" width=16 height=16 title="Logo Equisense" alt="" style="display: inline-block;")
+                        |  Equisense
                     .clearfix
                   .row
                     .container-fluid
-                      p En première mission en Android, j'y ai développé et longuement testé l'application permettant la synchronisation et le traitement des données locomotrices du cheval depuis la centrale inertielle Equisense Motion.
+                      p En premier poste en Android, j'y ai développé l'application permettant la remontée et le traitement des données locomotrices du cheval depuis la centrale inertielle Equisense Motion.
                       ul
-                        li Contenu applicatifs très technique (commandes et transferts par Bluetooth Low Energy, géolocalisation, traitement et représentation des données)
-                        li Intéraction avec différents serveurs et services (pySQL REST, Parse puis Firebase, Facebook, ...)
+                        li Contenu très technique: commandes et transferts par Bluetooth LE, géolocalisation, traitement et représentation des données en connexion et hors connexion,
+                        li synchronisation des données avec différents serveurs et services (pySQL REST, Parse puis Firebase, OAuth Facebook, ...),
+                        li intégration des vues et du comportement UX depuis les sketchs et spécifications,
+                        li tests terrain en écuries et reporting des bogues.
                li
                 article.content
                   .headline
                     h5.datetime.pull-right
                         span de Oct 2012
                         span à Fév 2013
-                    h4 Freelance PHP 5 / JS
+                    h4 Freelance web en JS et PHP 5
                     h5 avec 
                       a(href="http://samlem.com" title="Site de Samuel Lemaresquier")
                         | Samuel Lemaresquier
@@ -127,32 +130,34 @@ block content
                     .clearfix
                   .row
                     .container-fluid
-                      p Le produit du projet étant un site PHP 5 livrable aux franchisés de l'enseigne AlerteApero, mon travail aura été de retravailler la base Prestashop par :
+                      p J'ai produit avec Samuel le projet-livrable permettant le déploiement d'un e-commerce Prestashop sur-mesure chez les franchisés de AlerteApéro.
                       ul
-                        li des remplacements et des corrections et la création d'un module métier,
-                        li le développement de la logique javascript désirée au sein des vues,
-                        li l'integration des alertes SMS pour les transporteurs par le service Twilio,
-                        li l'intégration des achats sécurisés avec le service CMCIC Paiement.
+                        li Remplacements et corrections de la base PHP de Prestashop,
+                        li création du back-office d'administration spécifique à AlerteApéro sous forme de module Prestashop,
+                        li intégration avec le service Twilio permettant l'envoie de notifications de commande par SMS aux transporteurs,
+                        li l'implémentation des transactions chiffrées avec les services de paiement en ligne du CMCIC,
+                        li intégration de la logique dynamique Javascript / PHP au sein des vues.
+                      p Il sera resté en usage jusque Septembre 2015.
               li
                 article.content
                   .headline
                     h5.datetime.pull-right
                         span de Juin 2012
                         span à Juil 2013
-                    h4 Freelance Python
+                    h4 Freelance Python en réseaux
                     h5 pour 
                       a(href="http://www.9h37.fr" title="Site de 9h37 SAS")
-                        img(src="/img/9h37.png" width=16 height=16 title="9h37 logo" alt="" style="display: inline-block;")
+                        img(src="/img/9h37.png" width=16 height=16 title="Logo de 9h37" alt="" style="display: inline-block;")
                         |  9h37 SAS
                       | , solutions de e-santé
                     .clearfix
                   .row
                     .container-fluid
-                      p En auto-entrepreneur, j'ai poursuivi les projets entrepris pour 9h37 avec notamment :
+                      p En auto-entrepreneur, j'ai poursuivi les projets entrepris pour 9h37 avec
                       ul
-                        li la création de l'interface pyQt / wxPython du daemon Python existant,
-                        li le développement d'un prototype logiciel redirigeant les données d'un périphérique médical USB vers un intervenant distant par XMPP chiffré à des fins de télémédecine,
-                        li et l'étude des solutions concernant le packaging et le déploiement de code Python propriétaire.
+                        li le développement du logiciel permettant le pont de données entre un périphérique médical USB avec un pratiquant tiers distant par XMPP chiffré à des fins de télémédecine,
+                        li la création de l'interface UI (pyQt et wxPython) nécessaire au contrôle du logiciel (pour Windows, Mac et Linux),
+                        li et l'apport de solutions en matière de packaging et d'obfuscation du code source propriétaire en Python.
               li
                 article.content
                   .headline
@@ -162,13 +167,13 @@ block content
                     h4 Junior Python / JS
                     h5 pour 
                       a(href="http://www.9h37.fr" title="Site de 9h37 SAS")
-                        img(src="/img/9h37.png" width=16 height=16 title="9h37 logo" alt="" style="display: inline-block;")
+                        img(src="/img/9h37.png" width=16 height=16 title="Logo de 9h37" alt="" style="display: inline-block;")
                         |  9h37 SAS
                       | , solutions de e-santé
                     .clearfix
                   .row
                     .container-fluid
-                      p En stage de première année chez 9h37, j'ai développé et appris par divers projets relatifs aux besoins applicatifs du monde médical, et réalisé entre autres :
+                      p En stage de première année, j'y ai développé divers projets relatifs aux besoins applicatifs du monde médical, notamment :
                       ul
                         li un daemon python permettant l'utilisation d'une page web comme interface pour l'execution de code arbitraire,
                         li une interface javascript permettant l'utilisation des logiciels d'Accès aux Téléservices de l'Assurance Maladie (ATSAM) natifs depuis une page web par le biais du daemon, permettant ainsi des intéractions entre un serveur web et les lecteurs de cartes à puce des praticiens de santé.
@@ -262,8 +267,7 @@ block content
                 article.content
                   .headline
                     h5.datetime.pull-right
-                        span de 2010 à
-                        span aujourd'hui
+                        span depuis Octobre 2010
                     h4 Diplôme d'Expertise en Technologies de l’Information
                     h5 à 
                       a(href="http://www.epitech.eu" title="Site d'EPITECH") EPITECH
@@ -271,18 +275,6 @@ block content
                   .row
                     .container-fluid
                       p Score de 870 au E-TOEIC de Septembre 2012.
-              li
-                article.content
-                  .headline
-                    h5.datetime.pull-right
-                        span de 2007
-                        span à 2010
-                    h4 Baccalauréat scientifique
-                    h5 au lycée Pierre de la Ramée (02)
-                    .clearfix
-                  .row
-                    .container-fluid
-                      p Classes de spécialité mathématiques.
     footer.container-fluid.borderleft.hidden-print
       .container-fluid
         .col-xs-12

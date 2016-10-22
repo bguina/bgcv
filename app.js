@@ -5,12 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
+var i18n = require('i18n-2');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
+// Express Configuration
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -21,7 +23,29 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Attach the i18n property to the express request object
+// And attach helper methods for use in templates
+i18n.expressBind(app, {
+  locales: ['fr', 'en'],
+  defaultLocale: 'fr',
+  directory: __dirname + '/locales',
+  extension: '.json', 
+  cookieName: 'locale',
+  indent: ' '
+});
+app.use(function(req, res, next) {
+ if (req.query.lang) {
+    req.i18n.setLocaleFromQuery();
+    res.cookie(config.locale.cookie, req.i18n.getLocale());
+  } else {
+    req.i18n.setLocaleFromCookie();
+  }
+  next();
+});
+
 
 var srcPath = __dirname + '/views/';
 var destPath = __dirname + '/public';
