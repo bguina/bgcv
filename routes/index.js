@@ -4,8 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res) {
   res.render('index', {
-    i18n: req.i18n,
-    title: req.i18n.locale
+    title: req.i18n.__('title')
   })
 });
 
