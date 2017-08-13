@@ -1,7 +1,5 @@
 # bgcv
 
-## cv.benoitguina.fr
+## cv.benoitguina.fr #offline
 
-Personal Curiculum Vitae server for myself.
-
-benoit.guina@gmail.com
+Personal Curiculum Vitae server for me and myself.
